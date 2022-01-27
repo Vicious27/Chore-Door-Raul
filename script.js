@@ -100,7 +100,7 @@ doorImage3.onclick = () => {
 // Handlers
 startButton.onclick = () => {
   if(currentlyPlaying === false) {
-    !startRound();
+    startRound();
   }
 };
 
