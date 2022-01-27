@@ -91,7 +91,7 @@ doorImage2.onclick = () => {
 };
 
 doorImage3.onclick = () => {
-  if(currentlyPlaying && !isClicked(doorImage1)) {
+  if(currentlyPlaying && !isClicked(doorImage3)) {
     doorImage3.src = openDoor3;
     playDoor(doorImage3);
   }
