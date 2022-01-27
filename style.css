@@ -49,7 +49,6 @@ body {
 .door-frame {
     cursor: pointer;
     padding: 10px;
-    transform: translate(45deg);
 }
 
 /*makes .door-frame shake */
