@@ -74,7 +74,7 @@ const playDoor = (door) => {
 };
 
 
-// onclick functions
+// doorElements onclick functions
 doorImage1.onclick = () => {
   if(currentlyPlaying && !isClicked(doorImage1)) {
     doorImage1.src = openDoor1;
@@ -97,7 +97,25 @@ doorImage3.onclick = () => {
   }
 };
 
-//declaring winer function/game over
+// Handlers
+startButton.onclick = () => {
+  if(currentlyPlaying === false) {
+    !startRound();
+  }
+};
+
+const startRound = () => {
+  doorImage1.src = closedDoorPath;
+  doorImage2.src = closedDoorPath;
+  doorImage3.src = closedDoorPath;
+  numClosedDoors = 3;
+  startButton.innerHTML = 'Good luck!';
+  currentlyPlaying = true;
+
+  randomChoreDoorGenerator();
+};
+
+//declaring winner function
 const gameOver = (status) => {
   if(status === 'win') {
     startButton.innerHTML = 'You win! Play again?';
@@ -108,5 +126,4 @@ const gameOver = (status) => {
   currentlyPlaying = false;
 };
 
-
-randomChoreDoorGenerator();
+startRound();
