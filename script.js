@@ -10,9 +10,11 @@ const beachDoorPath = 'https://content.codecademy.com/projects/chore-door/images
 
 const spaceDoorPath = 'https://content.codecademy.com/projects/chore-door/images/space.svg';
 
+const closedDoorPath = 'https://content.codecademy.com/projects/chore-door/images/closed_door.svg';
+
 
 //function for randomizing the choreBot
-const numClosedDoors = 3;
+let numClosedDoors = 3;
 
 let openDoor1;
 let openDoor2;
@@ -37,18 +39,47 @@ const randomChoreDoorGenerator = () => {
   }
 };
 
+let isClicked = (door) => {
+  if(door.src === closedDoorPath) {
+    return false;
+  }
+  else {
+    return true;
+  }
+};
+
+const playDoor = () => {
+  numClosedDoors--;
+  
+  if(numClosedDoors === 0) {
+    gameOver();
+  }
+};
+
+
+
 
 // onclick functions
 doorImage1.onclick = () => {
-  doorImage1.src = openDoor1;
+  if(!isClicked(doorImage1)) {
+    doorImage1.src = openDoor1;
+    playDoor();
+  }
+  
 };
 
 doorImage2.onclick = () => {
-  doorImage2.src = openDoor2;
+  if(!isClicked(doorImage2)) {
+    doorImage2.src = openDoor2;
+    playDoor();
+  }
 };
 
 doorImage3.onclick = () => {
-  doorImage3.src = openDoor3;
+  if(!isClicked(doorImage3)) {
+    doorImage3.src = openDoor3;
+    playDoor();
+  }
 };
 
 randomChoreDoorGenerator();
