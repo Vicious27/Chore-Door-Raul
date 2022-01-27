@@ -97,13 +97,13 @@ doorImage3.onclick = () => {
   }
 };
 
-// Handlers
+// Handler functions
 startButton.onclick = () => {
   if(currentlyPlaying === false) {
     startRound();
   }
 };
-
+// starts/re-starts the game
 const startRound = () => {
   doorImage1.src = closedDoorPath;
   doorImage2.src = closedDoorPath;

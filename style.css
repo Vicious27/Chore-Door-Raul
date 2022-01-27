@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
 body {
-    background-color: #010165;
+    background-color: rgba(0, 0, 0, 0.897);
     margin: 0px;
 }
 
 .header {
-    background-color: #00ffff;
+    background-color: #4f90c5e8;
     text-align: center;
 }
 
@@ -18,7 +19,7 @@ body {
 .instructions-title {
 	display: inline;
 	font-size: 18px;
-	color: #00ffff;
+	color: #eb2d6cf1;
 	font-family: Work Sans;
 }
 
@@ -31,14 +32,14 @@ body {
     padding-right: 25px;
     font-family: Work Sans;
     font-size: 36px;
-    color: #00ffff;
+    color: #397ba7da;
 }
 
 .instructions-text {
     padding: 10px;
     font-family: Work Sans;
-    font-size: 14px;
-    color: #00ffff;
+    font-size: 15px;
+    color: #397ba7da;
 }
 
 .door-row {
@@ -53,13 +54,16 @@ body {
 .start-row {
     margin: auto;
     width: 120px;
-    height: 43px;
-    font-family: Work Sans;
-    background-color: #eb6536;
-    padding-top: 18px;
-    font-size: 18px;
+    height: 10em;
+    font-family: 'DM Serif Display', serif;
+    background-color: #eb2d6cf1;
+    /* padding-top: 18px; */
+    font-size: 17px;
     text-align: center;
-    color: #010165;
+    color: #bfcfdfee;
     margin-bottom: 21px;
     cursor: pointer;
+    border-radius: .2em;
+    height: auto;
+    padding: .2em;
 }
