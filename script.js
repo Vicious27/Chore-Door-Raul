@@ -3,6 +3,8 @@ const doorImage1 = document.getElementById('door1');
 const doorImage2 = document.getElementById('door2');
 const doorImage3 = document.getElementById('door3');
 
+const startButton = document.getElementById('start');
+
 // DoorImage URL's
 const botDoorPath = 'https://content.codecademy.com/projects/chore-door/images/robot.svg';
 
@@ -50,13 +52,11 @@ let isClicked = (door) => {
 
 const playDoor = () => {
   numClosedDoors--;
-  
+
   if(numClosedDoors === 0) {
     gameOver();
   }
 };
-
-
 
 
 // onclick functions
@@ -79,6 +79,12 @@ doorImage3.onclick = () => {
   if(!isClicked(doorImage3)) {
     doorImage3.src = openDoor3;
     playDoor();
+  }
+};
+
+const gameOver = (status) => {
+  if(status === 'win') {
+    startButton.innerHTML = 'You win! Play again?';
   }
 };
 
