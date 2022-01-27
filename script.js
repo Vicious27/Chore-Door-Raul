@@ -54,7 +54,7 @@ const playDoor = () => {
   numClosedDoors--;
 
   if(numClosedDoors === 0) {
-    gameOver();
+    gameOver('win');
   }
 };
 
